@@ -5,7 +5,7 @@ import (
 	"fmt"
 )
 
-func Choice(text string) (bool, error) {
+func ChoiceCmd(text string) (bool, error) {
 	var choiceCmd string
 
 	fmt.Printf("%s y/n", text)
