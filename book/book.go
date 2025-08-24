@@ -40,3 +40,9 @@ func AddBook(books Books) Books {
 
 	return books
 }
+
+func ViewBooks(books Books) {
+	for i, book := range books.Book {
+		fmt.Printf("Книга %d: %s, %d стр.\n", i+1, book.Title, book.Length)
+	}
+}

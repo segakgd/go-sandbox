@@ -1,6 +1,8 @@
 package user
 
-import "fmt"
+import (
+	"fmt"
+)
 
 type Users struct {
 	Users []User
@@ -31,4 +33,10 @@ func MakeUser(users Users) (User, Users) {
 	users.Users = append(users.Users, user)
 
 	return user, users
+}
+
+func ViewUsers(users Users) {
+	for i, user := range users.Users {
+		fmt.Printf("Пользователь %d: %s, %d лет\n", i+1, user.Name, user.Age)
+	}
 }
