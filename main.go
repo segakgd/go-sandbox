@@ -20,7 +20,7 @@ func main() {
 	var height float32
 
 	fmt.Println("Привет, как тебя зовут?")
-	fmt.Scan(&name)
+	fmt.Scanln(&name)
 
 	fmt.Println("Отлично ", name, ", а сколько тебе лет?")
 	fmt.Scan(&age)
@@ -43,7 +43,7 @@ func main() {
 		var length uint16
 
 		fmt.Println("Как называется книга?")
-		fmt.Scan(&title)
+		fmt.Scanln(&title)
 
 		fmt.Println("Сколько в ней страниц")
 		fmt.Scan(&length)
