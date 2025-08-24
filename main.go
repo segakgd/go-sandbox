@@ -8,6 +8,12 @@ type Person struct {
 	Height float32
 }
 
+type Book struct {
+	Title  string
+	Author Person
+	Length uint16
+}
+
 func main() {
 	var name string
 	var age uint8
@@ -25,6 +31,30 @@ func main() {
 	var person = Person{name, age, height}
 
 	fmt.Printf("%s, спасибо, что ты мне написал. Тебе %d лет, а твой рост: %.2f см\n", person.Name, person.Age, person.Height)
+
+	fmt.Println("Хочешь добавить книгу? y/n")
+
+	var iaAddBook = "n"
+
+	fmt.Scan(&iaAddBook)
+
+	if iaAddBook == "y" {
+		var title string
+		var length uint16
+
+		fmt.Println("Как называется книга?")
+		fmt.Scan(&title)
+
+		fmt.Println("Сколько в ней страниц")
+		fmt.Scan(&length)
+
+		var book = Book{title, person, length}
+
+		fmt.Printf("%s, спасибо что ты добавил книгу %s, количество страниц: %d \n", book.Title, book.Author.Name, book.Length)
+
+	} else {
+		fmt.Println("Как хочешь")
+	}
 }
 
 //import (
