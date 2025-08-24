@@ -2,9 +2,29 @@ package main
 
 import "fmt"
 
+type Person struct {
+	Name   string
+	Age    uint8
+	Height float32
+}
+
 func main() {
-	fmt.Println("Привет, Go!")
-	fmt.Println("w1w31231")
+	var name string
+	var age uint8
+	var height float32
+
+	fmt.Println("Привет, как тебя зовут?")
+	fmt.Scan(&name)
+
+	fmt.Println("Отлично ", name, ", а сколько тебе лет?")
+	fmt.Scan(&age)
+
+	fmt.Println("А рост?")
+	fmt.Scan(&height)
+
+	var person = Person{name, age, height}
+
+	fmt.Printf("%s, спасибо, что ты мне написал. Тебе %d лет, а твой рост: %.2f см\n", person.Name, person.Age, person.Height)
 }
 
 //import (
